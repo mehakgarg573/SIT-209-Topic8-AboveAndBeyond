@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Highcharts Pie Chart</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    
+</head>
+<body>
+    <div id="pie-chart-container"></div>
+    <script>
+        // Define the data for the pie chart
+        var data = [
+            ['Cars', 45],
+            ['Trucks', 30],
+            ['Motorcycles', 20],
+            ['Bicycles', 5]
+        ];
+
+        // Define the chart configuration object
+        var chartConfig = {
+            chart: {
+                type: 'pie'
+            },
+            title: {
+                text: 'Vehicle Types'
+            },
+            series: [{
+                name: 'Vehicle',
+                data: data
+            }]
+        };
+
+        // Create the pie chart
+        Highcharts.chart('pie-chart-container', chartConfig);
+    </script>
+</body>
+</html>
